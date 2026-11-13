@@ -1,1 +1,271 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>My Profile | PLAYT124</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <header class="top-header">
+      <a class="brand" href="home.html">
+        <div class="brand-logo">P</div>
+        <div class="brand-text">
+          <span class="welcome-text" id="welcomeText">Welcome Back,</span>
+          <strong>PLAYT124</strong>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a class="header-icon" href="updates.html" aria-label="Updates">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 18a2 2 0 0 0 2-2h-4a2 2 0 0 0 2 2Z"/>
+            <path d="M5 16h14l-2-2v-4a5 5 0 0 0-10 0v4l-2 2Z"/>
+            <path d="M9 4.5a3 3 0 0 1 6 0"/>
+          </svg>
+        </a>
+
+        <a class="header-icon" href="contact.html" aria-label="Support">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 13v-2a8 8 0 0 1 16 0v2"/>
+            <path d="M4 13h3v6H6a2 2 0 0 1-2-2v-4Z"/>
+            <path d="M20 13h-3v6h1a2 2 0 0 0 2-2v-4Z"/>
+            <path d="M17 19c-1 2-3 2-5 2"/>
+          </svg>
+        </a>
+
+        <a class="coin-display" href="wallet.html">
+          <span class="wallet-symbol">▣</span>
+          <strong id="headerCoinBalance">--</strong>
+        </a>
+      </div>
+    </header>
+
+    <main class="profile-main">
+
+      <section class="identity-section">
+        <div class="avatar" id="userAvatar">P</div>
+
+        <h1 id="profileUsername">Loading profile...</h1>
+        <p class="account-status">
+          <span class="status-dot"></span>
+          Account Active
+        </p>
+        <p class="profile-email" id="profileEmail">Loading email...</p>
+      </section>
+
+      <section class="stats-card" aria-label="Player statistics">
+        <div class="stat-item">
+          <strong>--</strong>
+          <span>Matches<br>Played</span>
+        </div>
+        <div class="stat-item">
+          <strong>--</strong>
+          <span>Total Kills</span>
+        </div>
+        <div class="stat-item">
+          <strong>--</strong>
+          <span>Coin Won</span>
+        </div>
+      </section>
+
+      <section class="profile-menu">
+
+        <button class="menu-item" id="myProfileButton" type="button">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+          </span>
+          <span class="menu-label">My Profile</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <a class="menu-item" href="wallet.html">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 8h18M16 14h2"/></svg>
+          </span>
+          <span class="menu-label">My Wallet</span>
+          <span class="menu-arrow">›</span>
+        </a>
+
+        <button class="menu-item coming-item" type="button" data-feature="My Statistics">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 20V11h5v9M10 20V4h5v16M17 20v-8h5v8"/></svg>
+          </span>
+          <span class="menu-label">My Statistics</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <a class="menu-item" href="ranking.html">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0V4Z"/><path d="M8 6H4v2a4 4 0 0 0 4 4M16 6h4v2a4 4 0 0 1-4 4M12 13v5m-4 2h8m-6-2h4"/></svg>
+          </span>
+          <span class="menu-label">Top Players</span>
+          <span class="menu-arrow">›</span>
+        </a>
+
+        <button class="menu-item coming-item" type="button" data-feature="Refer & Earn">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 8h5m-2.5-2.5v5"/></svg>
+          </span>
+          <span class="menu-label">Refer &amp; Earn</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <button class="menu-item coming-item" type="button" data-feature="Notifications">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+          </span>
+          <span class="menu-label">Notifications</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <a class="menu-item" href="contact.html">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 13h3v6H6a2 2 0 0 1-2-2v-4ZM20 13h-3v6h1a2 2 0 0 0 2-2v-4Z"/></svg>
+          </span>
+          <span class="menu-label">Contact Us</span>
+          <span class="menu-arrow">›</span>
+        </a>
+
+        <div class="menu-item preference-item">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+          </span>
+          <span class="menu-label">Importance Notice</span>
+          <label class="switch">
+            <input type="checkbox" id="noticeToggle">
+            <span class="switch-track"></span>
+          </label>
+        </div>
+
+        <div class="menu-item preference-item">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </span>
+          <span class="menu-label">Music</span>
+          <label class="switch">
+            <input type="checkbox" id="musicToggle">
+            <span class="switch-track"></span>
+          </label>
+        </div>
+
+        <button class="menu-item coming-item" type="button" data-feature="FAQ">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 1 1 4.3 1.7c-1.2 1.1-1.8 1.4-1.8 3.3M12 17.5v.1"/></svg>
+          </span>
+          <span class="menu-label">FAQ</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <button class="menu-item coming-item" type="button" data-feature="About Us">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v6m0-10v.1"/></svg>
+          </span>
+          <span class="menu-label">About Us</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <button class="menu-item coming-item" type="button" data-feature="Privacy Policy">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></svg>
+          </span>
+          <span class="menu-label">Privacy Policy</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <button class="menu-item coming-item" type="button" data-feature="Terms & Conditions">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+          </span>
+          <span class="menu-label">Terms &amp; Conditions</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+        <button class="menu-item logout-item" id="logoutButton" type="button">
+          <span class="menu-icon">
+            <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5m5 5H3"/><path d="M12 3h6a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3h-6"/></svg>
+          </span>
+          <span class="menu-label">Logout</span>
+          <span class="menu-arrow">›</span>
+        </button>
+
+      </section>
+
+      <p class="app-version">PLAYT124</p>
+    </main>
+
+    <div class="support-float">
+      <a href="contact.html" aria-label="Contact support">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 13v-2a8 8 0 0 1 16 0v2"/>
+          <path d="M4 13h3v6H6a2 2 0 0 1-2-2v-4ZM20 13h-3v6h1a2 2 0 0 0 2-2v-4Z"/>
+        </svg>
+      </a>
+    </div>
+
+    <nav class="bottom-nav">
+      <a href="offers.html">
+        <span class="nav-icon">%</span>
+        <span>Offer</span>
+      </a>
+      <a href="ranking.html">
+        <span class="nav-icon">♜</span>
+        <span>Ranking</span>
+      </a>
+      <a href="home.html">
+        <span class="nav-icon">⌂</span>
+        <span>Home</span>
+      </a>
+      <a href="wallet.html">
+        <span class="nav-icon">▣</span>
+        <span>Wallet</span>
+      </a>
+      <a href="profile.html" class="active">
+        <span class="nav-icon">♙</span>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <div class="profile-modal" id="profileModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <section class="profile-modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeProfileModal" type="button" aria-label="Close">×</button>
+      <h2 id="modalTitle">My Profile</h2>
+      <div class="modal-avatar" id="modalAvatar">P</div>
+
+      <div class="detail-row">
+        <span>Username</span>
+        <strong id="detailUsername">Loading...</strong>
+      </div>
+      <div class="detail-row">
+        <span>Email address</span>
+        <strong id="detailEmail">Loading...</strong>
+      </div>
+      <div class="detail-row">
+        <span>Account ID</span>
+        <strong id="detailUid">Loading...</strong>
+      </div>
+      <div class="detail-row">
+        <span>Joined</span>
+        <strong id="detailJoined">Not available</strong>
+      </div>
+      <p class="modal-note">Your account details are read from your PLAYT124 account.</p>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script type="module" src="profile.js"></script>
+</body>
+  </html>
+            
