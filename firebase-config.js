@@ -8,6 +8,10 @@ import {
   browserSessionPersistence
 } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js";
 
+import {
+  getFirestore
+} from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyAUdwhkBRVrrQkzRevu1Oj_a9nrpi7YgOc",
   authDomain: "playt124.firebaseapp.com",
@@ -20,6 +24,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
+export const db = getFirestore(app);
 
 export {
   setPersistence,
