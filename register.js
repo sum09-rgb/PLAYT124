@@ -4,7 +4,16 @@ import {
   updateProfile
 } from "https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js";
 
-import { auth } from "./firebase-config.js";
+import {
+  doc,
+  setDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/13.3.0/firebase-firestore.js";
+
+import {
+  auth,
+  db
+} from "./firebase-config.js";
 
 const form = document.querySelector("form");
 
@@ -45,16 +54,23 @@ function getErrorMessage(error) {
   switch (error.code) {
     case "auth/email-already-in-use":
       return "This email already has an account. Please log in.";
+
     case "auth/invalid-email":
       return "Please enter a valid email address.";
+
     case "auth/weak-password":
-      return "Your password is too weak. Use at least 6 characters.";
+      return "Password must contain at least 6 characters.";
+
     case "auth/operation-not-allowed":
-      return "Email and password registration is not enabled in Firebase.";
+      return "Email and password registration is not enabled.";
+
     case "auth/network-request-failed":
       return "Network error. Check your internet connection.";
-    case "auth/too-many-requests":
-      return "Too many attempts. Please try again later.";
+
+    case "permission-denied":
+    case "firestore/permission-denied":
+      return "Your account was created, but the database rejected the profile. Contact support.";
+
     default:
       return "Registration failed. Please try again.";
   }
@@ -83,6 +99,11 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
+  if (username.length < 3 || username.length > 30) {
+    showMessage("Username must be 3 to 30 characters.");
+    return;
+  }
+
   if (password.length < 6) {
     showMessage("Password must contain at least 6 characters.");
     return;
@@ -98,9 +119,13 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
+  const submitButton = form.querySelector(
+    'button[type="submit"], input[type="submit"]'
+  );
 
   if (submitButton) submitButton.disabled = true;
+
+  let createdUser = null;
 
   showMessage("Creating your PLAYT124 account...", true);
 
@@ -111,15 +136,35 @@ form.addEventListener("submit", async (event) => {
       password
     );
 
-    await updateProfile(userCredential.user, {
+    createdUser = userCredential.user;
+
+    await updateProfile(createdUser, {
       displayName: username
     });
 
+    await setDoc(doc(db, "users", createdUser.uid), {
+      uid: createdUser.uid,
+      username: username,
+      email: createdUser.email,
+      createdAt: serverTimestamp()
+    });
+
     showMessage("Account created successfully. Opening PLAYT124...", true);
+
     window.location.href = "home.html";
+
   } catch (error) {
     console.error("Registration error:", error);
-    showMessage(getErrorMessage(error));
+
+    if (createdUser) {
+      showMessage(
+        "Your authentication account was created, but its profile could not be saved. Do not register again. Please contact support."
+      );
+    } else {
+      showMessage(getErrorMessage(error));
+    }
+
     if (submitButton) submitButton.disabled = false;
   }
 });
+      
