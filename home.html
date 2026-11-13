@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0d">
+
+  <title>PLAYT124 - Home</title>
+
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="top-header">
+
+    <a href="home.html" class="brand-area">
+      <div class="image-slot logo-slot" data-image-slot="siteLogo">
+        <span class="image-fallback logo-fallback">P</span>
+        <img alt="PLAYT124 Logo">
+      </div>
+
+      <div class="welcome-area">
+        <span>Welcome Back,</span>
+        <strong>PLAYT124</strong>
+      </div>
+    </a>
+
+    <div class="header-actions">
+
+      <button class="header-icon" id="announcementButton"
+        aria-label="View announcements">
+        ◉
+      </button>
+
+      <a href="contact.html" class="header-icon"
+        aria-label="Contact support">
+        ♧
+      </a>
+
+      <a href="wallet.html" class="coin-balance">
+        <span>▣</span>
+        <strong id="coinBalance">--</strong>
+        <small>Coin</small>
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- MAIN PAGE -->
+  <main class="home-container">
+
+
+    <!-- OFFICIAL ANNOUNCEMENT -->
+    <section class="announcement-section">
+
+      <div class="announcement-box">
+
+        <span class="announcement-icon">📢</span>
+
+        <div class="announcement-track">
+          <div class="announcement-text">
+            <span>WELCOME TO PLAYT124</span>
+            <span>OFFICIAL ANNOUNCEMENTS</span>
+            <span>WELCOME TO PLAYT124</span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK ACCESS -->
+    <section class="quick-access">
+
+      <a href="profile.html" class="quick-card">
+        <span class="quick-icon">◉</span>
+        <strong>MY PROFILE</strong>
+      </a>
+
+      <a href="wallet.html" class="quick-card">
+        <span class="quick-icon">▣</span>
+        <strong>MY WALLET</strong>
+      </a>
+
+      <a href="ranking.html" class="quick-card">
+        <span class="quick-icon">🏆</span>
+        <strong>TOP PLAYER</strong>
+      </a>
+
+      <a href="contact.html" class="quick-card">
+        <span class="quick-icon">🎧</span>
+        <strong>CONTACT US</strong>
+      </a>
+
+    </section>
+
+
+    <!-- APP TUTORIAL -->
+    <section class="tutorial-section">
+
+      <button class="tutorial-toggle" id="tutorialToggle"
+        aria-expanded="false">
+
+        <span class="tutorial-question">?</span>
+
+        <strong>How to Use Our App</strong>
+
+        <span class="tutorial-arrow">▼</span>
+
+      </button>
+
+      <div class="tutorial-content" id="tutorialContent" hidden>
+
+        <div class="image-slot tutorial-image"
+          data-image-slot="tutorialBanner">
+
+          <img alt="PLAYT124 application tutorial">
+
+          <div class="image-fallback">
+            <span>PLAYT124</span>
+            <strong>TUTORIAL IMAGE</strong>
+            <small>Admin-controlled image</small>
+          </div>
+
+        </div>
+
+        <div class="tutorial-links">
+
+          <a href="how-to-use.html">How to use the application</a>
+          <a href="how-to-login.html">How to login</a>
+          <a href="how-to-join.html">How to join tournaments</a>
+          <a href="how-to-wallet.html">How to use the wallet</a>
+          <a href="how-to-contact.html">How to contact support</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- UPDATES AND ALERTS -->
+    <section class="content-section updates-section"
+      id="updatesSection">
+
+      <div class="section-heading">
+        <div>
+          <h2>Updates and Alerts</h2>
+          <p>Latest information from PLAYT124</p>
+        </div>
+      </div>
+
+      <a href="updates.html" class="image-link">
+
+        <div class="image-slot update-banner"
+          data-image-slot="updateBanner">
+
+          <img alt="PLAYT124 latest updates">
+
+          <div class="image-fallback">
+            <span>UPDATES & ALERTS</span>
+            <strong>YOUR PROMOTIONAL BANNER</strong>
+            <small>Image controlled by Admin Dashboard</small>
+          </div>
+
+        </div>
+
+      </a>
+
+    </section>
+
+
+    <!-- EXCLUSIVE MATCHES -->
+    <section class="content-section exclusive-section">
+
+      <div class="section-heading">
+        <div>
+          <h2 class="highlight-heading">
+            EXCLUSIVE <span class="live-label">● LIVE</span>
+          </h2>
+
+          <p>Big Winnings For All</p>
+        </div>
+      </div>
+
+      <div class="exclusive-grid">
+
+        <a href="exclusive.html" class="exclusive-card">
+
+          <div class="image-slot exclusive-image"
+            data-image-slot="exclusiveOne">
+
+            <img alt="Exclusive tournament one">
+
+            <div class="image-fallback">
+              <strong>EXCLUSIVE 01</strong>
+              <span>Admin image</span>
+            </div>
+
+          </div>
+
+          <span class="play-label">▶ PLAY</span>
+
+        </a>
+
+
+        <a href="exclusive.html" class="exclusive-card">
+
+          <div class="image-slot exclusive-image"
+            data-image-slot="exclusiveTwo">
+
+            <img alt="Exclusive tournament two">
+
+            <div class="image-fallback">
+              <strong>EXCLUSIVE 02</strong>
+              <span>Admin image</span>
+            </div>
+
+          </div>
+
+          <span class="play-label">▶ PLAY</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- MY CONTESTS -->
+    <section class="content-section contests-section">
+
+      <div class="section-heading">
+
+        <div>
+          <h2 class="highlight-heading">
+            MY CONTESTS <span>✓</span>
+          </h2>
+
+          <p>Your Tournaments Journey</p>
+        </div>
+
+      </div>
+
+
+      <div class="contest-grid">
+
+        <a href="ongoing.html" class="contest-card">
+
+          <div class="image-slot contest-image"
+            data-image-slot="ongoingImage">
+
+            <img alt="Ongoing contests">
+
+            <div class="image-fallback">
+              <span>⟳</span>
+            </div>
+
+          </div>
+
+          <strong>Ongoing</strong>
+
+        </a>
+
+
+        <a href="upcoming.html" class="contest-card">
+
+          <div class="image-slot contest-image"
+            data-image-slot="upcomingImage">
+
+            <img alt="Upcoming contests">
+
+            <div class="image-fallback">
+              <span>▣</span>
+            </div>
+
+          </div>
+
+          <strong>Upcoming</strong>
+
+        </a>
+
+
+        <a href="completed.html" class="contest-card">
+
+          <div class="image-slot contest-image"
+            data-image-slot="completedImage">
+
+            <img alt="Completed contests">
+
+            <div class="image-fallback">
+              <span>🏆</span>
+            </div>
+
+          </div>
+
+          <strong>Completed</strong>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXTRA HOMEPAGE SPACE -->
+    <section class="home-bottom-space"></section>
+
+  </main>
+
+
+  <!-- FLOATING SUPPORT -->
+  <a href="contact.html" class="floating-support"
+    aria-label="Contact support">
+    🎧
+  </a>
+
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav class="bottom-navigation">
+
+    <a href="offers.html" class="bottom-nav-item">
+      <span>％</span>
+      <strong>Offer</strong>
+    </a>
+
+    <a href="ranking.html" class="bottom-nav-item">
+      <span>♙</span>
+      <strong>Ranking</strong>
+    </a>
+
+    <a href="home.html" class="bottom-nav-item active">
+      <span>⌂</span>
+      <strong>Home</strong>
+    </a>
+
+    <a href="wallet.html" class="bottom-nav-item">
+      <span>▣</span>
+      <strong>Wallet</strong>
+    </a>
+
+    <a href="profile.html" class="bottom-nav-item">
+      <span>♙</span>
+      <strong>Profile</strong>
+    </a>
+
+  </nav>
+
+
+  <!-- NOTIFICATION MESSAGE -->
+  <div id="homeToast" class="home-toast"
+    role="status" aria-live="polite"></div>
+
+
+  <script src="home.js"></script>
+
+</body>
+</html>
